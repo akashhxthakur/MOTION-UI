@@ -1,0 +1,38 @@
+{
+  "name": "@motionui/core",
+  "version": "0.1.0",
+  "description": "Shared utilities for MotionUI Native",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.74"
+  },
+  "devDependencies": {
+    "@motionui/eslint-config": "workspace:*",
+    "@motionui/typescript-config": "workspace:*",
+    "eslint": "^9.17.0",
+    "react-native": "^0.76.5",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}

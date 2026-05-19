@@ -1,0 +1,36 @@
+# Getting Started
+
+MotionUI Native is a motion-first React Native component ecosystem built with Expo, Reanimated, and Gesture Handler.
+
+## Installation
+
+```bash
+pnpm add @motionui/components @motionui/theme @motionui/motion react-native-reanimated react-native-gesture-handler
+```
+
+## Setup
+
+Wrap your app with the required providers:
+
+```tsx
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { ThemeProvider } from '@motionui/theme';
+
+export default function App() {
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider defaultMode="system">{/* Your app */}</ThemeProvider>
+    </GestureHandlerRootView>
+  );
+}
+```
+
+## Babel Plugin
+
+Add Reanimated plugin to `babel.config.js`:
+
+```js
+module.exports = {
+  plugins: ['react-native-reanimated/plugin'],
+};
+```
